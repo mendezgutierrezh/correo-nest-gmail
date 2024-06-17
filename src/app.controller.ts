@@ -4,7 +4,10 @@ import { MailService } from "./mail/mail.service";
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService, private readonly mailService: MailService) {
+  constructor(
+    private readonly appService: AppService,
+    private readonly mailService: MailService
+  ) {
   }
 
   @Get()
@@ -12,10 +15,9 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Get("send-email")
-  async sendEmail() {
-    await this.mailService.testEmail();
-    return "Email sent";
+ @Get("send-invite")
+  async sendInvite() {
+    await this.mailService.sendCalendarInvite();
+    return "Calendar invite sent";
   }
-
 }
