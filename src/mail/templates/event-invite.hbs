@@ -1,29 +1,32 @@
-<!-- src/mail/templates/event-invite.hbs -->
-<p>
-  Hola, {{name}}
-</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Invitación a Evento</title>
+</head>
+<body>
+<p>Estimado(a) {{name}}</p>
 
-<p>
-  Te invitamos a nuestro evento "{{title}}".
-</p>
+<p>Nos complace informarle que ha sido asignado(a) como monitor para la visita al parque {{parkName}}
+  en el sendero {{trailName}} programado para el día {{date}}.</p>
 
-<p>
-  Descripción: {{description}}
-</p>
+<p>Detalle de la visita:</p>
+<ul>
+  <li><strong>Fecha:</strong> {{date}}</li>
+  <li><strong>Hora inicio:</strong> {{startTime}} hrs.</li>
+  <li><strong>Hora fin:</strong> {{endTime}} hrs aprox.</li>
+  <li><strong>Cantidad visitantes:</strong> {{visitorCount}} personas aprox.</li>
+  <li><strong>Materia:</strong> {{subject}}</li>
+</ul>
 
-<p>
-  Lugar: {{location}}
-</p>
+<p>Agradecemos de antemano su colaboración y esperamos contar con su valiosa participación.</p>
 
-<p>
-  Fecha y Hora: {{date}} a las {{time}}
-</p>
+<p>Saludos.</p>
 
-<p>
-  <a href="{{meetLink}}">Unirme con Google Meet</a>
-</p>
+<p>Equipo de Parques</p>
 
-<p>
-  Responder a {{organizerEmail}}
-</p>
+<img src="cid:logo" alt="Logo Parque Cordillera" style="width:350px; height:auto; margin-bottom: 5px;" />
+
+</body>
+</html>
 
